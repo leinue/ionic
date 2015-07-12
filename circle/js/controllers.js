@@ -1,6 +1,6 @@
-angular.module('starter.controllers',[])
+angular.module('starter',['ionic'])
 
-.controller('ProfileBoard',function($scope){
+.controller('ProfileCtrl',function($scope){
 
 	alert('sddss');
 
@@ -12,11 +12,10 @@ angular.module('starter.controllers',[])
 
     $ionicActionSheet.show({
       buttons:[
-        {text:'<b>About this Background</b>'},
-        {text:'move'}
+        {text:'Modify'}
       ],
       destructiveText:'Delete',
-      titleText:'modify your album',
+      titleText:'<b>About this Background</b>',
       cancelText:'Cancel',
       cancel:function(){
       	console.log('cancel');
