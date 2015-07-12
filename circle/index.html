@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Moments</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+  <body ng-controller="ActionSheetCtrl">
+  
+    <ion-pane>
+      <ion-header-bar class="bar-stable bar-dark">
+        <!-- <a class="button button-clear ion-android-arrow-back"></a> -->
+        <h1 class="title">Moments</h1>
+        <button ng-click="showActionSheet()" class="button button-clear ion-android-camera"></button>
+      </ion-header-bar>
+      <ion-content>
+
+        <div class="list">
+          <a href="#" class="item item-image">
+            <img src="http://i59.tinypic.com/9giy69.jpg">
+          </a>
+        </div>
+
+        <section class="ion-content-section">
+          <div class="list">
+            <a href="#/tab/profile" class="item item-avatar">
+              <img src="http://i59.tinypic.com/2zoy8uw.jpg">
+              <h2>[获取失败]</h2>
+              <p>2015.07.12</p>
+            </a>
+            <a href="#/tab/view" class="item item-body">
+              <p>
+                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                the content is from a card-body consisting of an image and paragraph text. The footer
+                consists of tabs, icons aligned left, within the card-footer.
+              </p>
+              <img class="full-image" src="http://i62.tinypic.com/vn2jrt.jpg">
+            </a>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+              <p><a href="#" class="button button-clear ion-android-favorite-outline"></a></p>
+              <p><a href="#" class="button button-clear ion-android-textsms"></a></p>
+            </div>
+          </div>
+          
+          <div class="list">
+            <a href="#/tab/profile" class="item item-avatar">
+              <img src="http://i62.tinypic.com/20qjfp3.jpg">
+              <h2>[获取失败]</h2>
+              <p>2015.07.12</p>
+            </a>
+            <a href="#/tab/view" class="item item-body">
+              <p>
+                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                the content is from a card-body consisting of an image and paragraph text. The footer
+                consists of tabs, icons aligned left, within the card-footer.
+              </p>
+              <img class="full-image" src="http://i2.tietuku.com/5c3d4fe922bac278.jpg">
+            </a>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+              <p><a href="#" class="button button-clear ion-android-favorite-outline"></a></p>
+              <p><a href="#" class="button button-clear ion-android-textsms"></a></p>
+            </div>
+          </div>
+
+          <script id="profile" type="text/ng-template">
+            <ion-view view-title="profile">
+              <ion-content ng-controller="ProfileCtrl">
+                <!-- the content of the profile page -->
+              </ion-content>
+            </ion-view>
+          </script>
+
+        </section>
+
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
