@@ -1,32 +1,26 @@
-This is an addon starter template for the [Ionic Framework](http://ionicframework.com/).
+Ionic App Base
+=====================
 
-## How to use this template
+A starting project for Ionic that optionally supports using custom SCSS.
 
-*This template does not work on its own*. It is missing the Ionic library, and AngularJS.
+## Using this project
 
-To use this, either create a new ionic project using the ionic node.js utility, or copy and paste this into an existing Cordova project and download a release of Ionic separately.
+We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
 
-### With the Ionic tool:
-
-Take the name after `ionic-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myApp blank
-```
-
-Then, to run it, cd into `myApp` and run:
+For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
 
 ```bash
-$ ionic platform add ios
-$ ionic build ios
-$ ionic emulate ios
+$ npm install -g ionic
 ```
 
-Substitute ios for android if not on a Mac, but if you can, the ios development toolchain is a lot easier to work with until you need to do anything custom to Android.
+Then run:
 
-## Demo
-http://plnkr.co/edit/tpl:IUU30p?p=preview
+```bash
+$ ionic start myProject tabs
+```
+
+More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
 
 ## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/contribute/#issues) to the main Ionic repository. On the other hand, pull requests are welcome here!
+Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+
