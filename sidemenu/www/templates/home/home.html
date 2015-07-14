@@ -7,7 +7,7 @@
     </ion-header-bar> -->
 
 
-    <ion-tabs class="tabs-icon-top tabs-color-positive">
+    <ion-tabs class="tabs-icon-top tabs-color-positive" ng-controller="HomeRootCtrl">
 
       <ion-tab title="Home"
                 icon-on="ion-ios-navigate"
@@ -19,8 +19,8 @@
           <button class="button button-clear ion-android-camera"></button>
         </ion-header-bar>
 
-        <ion-content has-tabs="true" on-refresh="onRefresh()">
-          <ion-refresher></ion-refresher>
+        <ion-content has-tabs="true">
+          <ion-refresher on-refresh="onRefresh()" refreshing-text="Refreshing..."></ion-refresher>
           <div class="list" ng-controller="ActionSheetCtrl">
             <a href="#" ng-click="showActionSheet()" class="item item-image">
               <img src="http://i59.tinypic.com/9giy69.jpg">
@@ -82,8 +82,8 @@
           <button class="button button-clear">Clear</button>
         </ion-header-bar>
 
-        <ion-content has-tabs="true" on-refresh="onRefresh()">
-          <ion-refresher></ion-refresher>
+        <ion-content has-tabs="true">
+          <ion-refresher on-refresh="onRefresh()"></ion-refresher>
 
         </ion-content>
 
@@ -100,8 +100,8 @@
           <button class="button button-clear">Edit</button>
         </ion-header-bar>
 
-        <ion-content has-tabs="true" on-refresh="onRefresh()">
-          <ion-refresher></ion-refresher>
+        <ion-content has-tabs="true">
+          <ion-refresher on-refresh="onRefresh()"></ion-refresher>
 
         </ion-content>
         

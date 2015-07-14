@@ -61,6 +61,13 @@ angular.module('starter.controllers', [])
   };*/
 })
 
+.controller('HomeRootCtrl',function($scope,$timeout){
+  $scope.onRefresh=function(){
+    console.log(';fddf');
+    $scope.$broadcast('scroll.refreshComplete');
+  }
+})
+
 .controller('HomeCtrl',function($scope){
 
 })
