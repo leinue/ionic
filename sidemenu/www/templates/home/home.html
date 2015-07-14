@@ -1,0 +1,121 @@
+<ion-view hide-nav-bar="true">
+
+    <ion-header-bar side="left" class="bar-stable bar-calm">
+        <button menu-toggle="left" class="button button-clear icon ion-navicon"></button>
+        <h1 class="title">Moments</h1>
+        <button class="button button-clear ion-android-camera"></button>
+    </ion-header-bar>
+
+
+    <ion-tabs class="tabs-icon-top tabs-color-positive">
+
+      <ion-tab title="Home"
+                icon-on="ion-ios-navigate"
+                icon-off="ion-ios-navigate-outline"
+                ng-controller="HomeCtrl">
+        <ion-header-bar side="left" class="bar-stable bar-calm">
+          <button menu-toggle="left" class="button button-clear icon ion-navicon"></button>
+          <h1 class="title">Moments</h1>
+          <button class="button button-clear ion-android-camera"></button>
+        </ion-header-bar>
+
+        <ion-content has-tabs="true" on-refresh="onRefresh()">
+          <ion-refresher></ion-refresher>
+          <div class="list" ng-controller="ActionSheetCtrl">
+            <a href="#" ng-click="showActionSheet()" class="item item-image">
+              <img src="http://i59.tinypic.com/9giy69.jpg">
+            </a>
+          </div>
+
+        <section class="ion-content-section">
+          <div class="list">
+            <a href="#/tab/profile" ng-click="ProfilCtrl" class="item item-avatar">
+              <img src="http://i59.tinypic.com/2zoy8uw.jpg">
+              <h2>蛤蛤</h2>
+              <p>2015.07.12</p>
+            </a>
+            <a href="#/tab/view" class="item item-body">
+              <p>
+                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                the content is from a card-body consisting of an image and paragraph text. The footer
+                consists of tabs, icons aligned left, within the card-footer.
+              </p>
+              <img class="full-image" src="http://i62.tinypic.com/vn2jrt.jpg">
+            </a>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+              <p><a href="#" class="button button-clear ion-android-favorite-outline"></a></p>
+              <p><a href="#" class="button button-clear ion-android-textsms"></a></p>
+            </div>
+          </div>
+          
+          <div class="list">
+            <a href="#/tab/profile" class="item item-avatar">
+              <img src="http://i62.tinypic.com/20qjfp3.jpg">
+              <h2>蛤蛤蛤</h2>
+              <p>2015.07.12</p>
+            </a>
+            <a href="#/tab/view" class="item item-body">
+              <p>
+                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                the content is from a card-body consisting of an image and paragraph text. The footer
+                consists of tabs, icons aligned left, within the card-footer.
+              </p>
+              <img class="full-image" src="http://i2.tietuku.com/5c3d4fe922bac278.jpg">
+            </a>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+              <p><a href="#" class="button button-clear ion-android-favorite-outline"></a></p>  
+              <p><a href="#" class="button button-clear ion-android-textsms"></a></p>
+            </div>
+          </div>
+        </ion-content>
+
+      </ion-tab>
+
+      <ion-tab title="Message"
+                icon-on="icon ion-ios-email"
+                icon-off="icon ion-ios-email-outline"
+                ng-controller="MessageCtrl">
+
+        <ion-header-bar class="bar-stable bar-calm">
+          <button menu-toggle="left" class="button button-clear icon ion-navicon"></button>
+          <h1 class="title">Message</h1>
+          <button class="button button-clear">Clear</button>
+        </ion-header-bar>
+
+        <ion-content has-tabs="true" on-refresh="onRefresh()">
+          <ion-refresher></ion-refresher>
+
+        </ion-content>
+
+      </ion-tab>
+
+      <ion-tab title="Profile"
+                icon-on="icon ion-ios-person"
+                icon-off="icon ion-ios-person-outline"
+                ng-controller="ProfileCtrl">
+
+        <ion-header-bar class="bar-stable bar-calm">
+          <button menu-toggle="left" class="button button-clear icon ion-navicon"></button>
+          <h1 class="title">Profile</h1>
+          <button class="button button-clear">Edit</button>
+        </ion-header-bar>
+
+        <ion-content has-tabs="true" on-refresh="onRefresh()">
+          <ion-refresher></ion-refresher>
+
+        </ion-content>
+        
+      </ion-tab>
+
+    </ion-tabs>
+
+    <ion-pane>
+      
+      <ion-content>
+
+        </section>
+
+      </ion-content>
+    </ion-pane>
+
+    </ion-view>
