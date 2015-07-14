@@ -61,11 +61,27 @@ angular.module('starter.controllers', [])
   };*/
 })
 
-.controller('HomeRootCtrl',function($scope,$timeout){
+.controller('HomeRootCtrl',function($scope,$ionicModal,$timeout){
+
+  $ionicModal.fromTemplateUrl('templates/home/NewMessage.html',{
+    scope:$scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  
   $scope.onRefresh=function(){
     console.log(';fddf');
     $scope.$broadcast('scroll.refreshComplete');
+  };
+
+  $scope.NewMessage=function(){
+    $scope.modal.show();
+  };
+
+  $scope.CloseNewMessage=function(){
+    $scope.modal.hide();
   }
+
 })
 
 .controller('HomeCtrl',function($scope){

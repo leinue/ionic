@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" view-title="Moments">
 
     <!-- <ion-header-bar side="left" class="bar-stable bar-calm">
         <button menu-toggle="left" class="button button-clear icon ion-navicon"></button>
@@ -16,7 +16,7 @@
         <ion-header-bar side="left" class="bar-stable bar-calm">
           <button menu-toggle="left" class="button button-clear icon ion-navicon"></button>
           <h1 class="title">Moments</h1>
-          <button class="button button-clear ion-android-camera"></button>
+          <button ng-click="NewMessage()" class="button button-clear ion-android-camera"></button>
         </ion-header-bar>
 
         <ion-content has-tabs="true">
@@ -84,7 +84,21 @@
 
         <ion-content has-tabs="true">
           <ion-refresher on-refresh="onRefresh()"></ion-refresher>
+          <div class="list">
 
+              <a class="item item-avatar" href="#">
+                <img src="http://i2.tietuku.com/dcdf744cacb4f4cf.jpg">
+                <h2>Korosensei</h2>
+                <p>The King of Terrors</p>
+              </a>
+
+              <a class="item item-avatar" href="#">
+                <img src="http://i2.tietuku.com/dcdf744cacb4f4cf.jpg">
+                <h2>Korosensei</h2>
+                <p>The King of Terrors</p>
+              </a>
+
+          </div>
         </ion-content>
 
       </ion-tab>
@@ -102,7 +116,42 @@
 
         <ion-content has-tabs="true">
           <ion-refresher on-refresh="onRefresh()"></ion-refresher>
+          <ion-list class="list">
+            <div class="item item-divider">
+              Viewer
+            </div>
 
+            <a class="item item-avatar" href="#/app/profile">
+              <img src="http://i59.tinypic.com/2zoy8uw.jpg">
+              <h2>ivy</h2>
+              <p>the creator</p>
+            </a>
+
+            <a class="item" href="#">
+              Friends
+            </a>
+            
+            <a class="item" href="#">
+              Favourites
+            </a>
+
+            <a class="item" href="#">
+              Draft
+            </a>
+
+            <div class="item item-divider">
+              More
+            </div>
+
+            <a class="item" href="#">
+              Setting
+            </a>
+
+            <a class="item" href="#">
+              Logout
+            </a>
+
+          </ion-list>
         </ion-content>
         
       </ion-tab>
