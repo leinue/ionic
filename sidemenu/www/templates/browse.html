@@ -1,5 +1,28 @@
 <ion-view view-title="Browse">
   <ion-content>
-    <h1>Browse</h1>
+    <ion-list 
+    		ng-controller="ListCtrl"
+    		show-delete="shouldShowDelete"
+    		show-reorder="shouldShowReorder"
+    		can-swipe="listCanSwipe">
+    		<ion-toggle ng-model="shouldShowDelete">Show Delete?</ion-toggle>
+  	<ion-toggle ng-model="shouldShowReorder">Show Reorder?</ion-toggle>
+		<ion-item ng-repeat="item in items">
+			{{item}}
+
+			<ion-option-button class="button-positive" ng-click="share(item)">
+				Share
+			</ion-option-button>
+
+			<ion-option-button class="button-info" ng-click="edit(item)">
+				Edit
+			</ion-option-button>
+			
+			<ion-delete-button class="ion-minus-circled" ng-click="items.splice($index,1)"></ion-delete-button>
+
+			<ion-reorder-button class="ion-navicon" on-reorder="reorderItem(item,$fromIndex,$toIndex)"></ion-reorder-button>
+
+		</ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

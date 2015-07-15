@@ -99,6 +99,56 @@
               </a>
 
           </div>
+
+          <div class="backdrop-area" ng-controller="BackdropCtrl">
+              <button ng-click="action()" class="button button-full button-positive">backdrop</button>
+          </div>
+
+          <ion-checkbox ng-model="isChecked">
+            checkbox status:{{isChecked}}
+          </ion-checkbox>
+
+          <ion-radio ng-model="choice" ng-value="A">
+            choose a
+          </ion-radio>
+
+          <ion-radio ng-model="choice" ng-value="B">
+            choose b
+          </ion-radio>
+
+          <ion-radio ng-model="choice" ng-value="C">
+            choose c
+          </ion-radio>
+
+          <ion-toggle ng-model="airplaneMode" toggle-class="toggle-calm">
+            Air plane is toggled:{{toggle-test}}
+          </ion-toggle>
+          
+          <div ng-controller="OnHoldCtrl">
+            <button on-hold="onHold()" class="button button-calm button-full">onHoldTest-openPopOver</button>
+          </div>
+          
+          <div ng-controller="PopupCtrl">
+            <button ng-click="showInput()" class="button button-full button-balanced">input</button>
+            <button ng-click="showConfirm()" class="button button-full button-calm">confirm</button>
+            <button ng-click="showAlert()" class="button button-full button-assertive">alert</button>
+          </div>
+
+          <div>
+            <button>12</button>
+          </div>
+
+          <script id="mypopover.html" type="text/ng-template">
+            <ion-popover-view>
+              <ion-header-bar>
+                <h1>Popover Title</h1>
+              </ion-header-bar>
+              <ion-content>
+                hello
+              </ion-content>
+            </ion-popover-view>
+          </script>
+          
         </ion-content>
 
       </ion-tab>

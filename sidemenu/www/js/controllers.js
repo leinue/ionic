@@ -96,6 +96,127 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('BackdropCtrl',function($scope,$ionicBackdrop,$timeout){
+
+  $scope.action=function(){
+    $ionicBackdrop.retain();
+    $timeout(function(){
+      $ionicBackdrop.release();
+    },1000);
+  };
+
+})
+
+.controller('OnHoldCtrl',function($scope,$ionicPopover){
+  
+  $scope.onHold=function(){
+
+    //from template
+
+    var template = '<ion-popover-view><ion-header-bar> <h1 class="title">My Popover Title</h1> </ion-header-bar> <ion-content> Hello! </ion-content></ion-popover-view>';
+    $scope.popover=$ionicPopover.fromTemplate(template,{
+      scope:$scope
+    });
+
+    //from templateurl
+
+    // $ionicPopover.fromTemplateUrl('mypopover.html',{
+    //   scope:$scope
+    // }).then(function(popover){
+    //   $scope.popover=popover;
+    // });
+
+    $scope.openPopover=function($event){
+      $scope.popover.show($event);
+    };
+
+    $scope.closePopover=function(){
+      $scope.popover.hide();
+    };
+
+    $scope.$on('$destory',function(){
+
+    });
+
+    $scope.$on('popover.removed',function(){
+
+    });
+
+    $scope.openPopover();
+
+  }
+
+})
+
+.controller('PopupCtrl',function($scope,$ionicPopup){
+
+  $scope.showAlert=function(){
+    var alertPopup=$ionicPopup.alert({
+      title:"dont eat that",
+      template:'23333333'
+    });
+    alertPopup.then(function(res){
+      console.log('then..');
+    });
+  };
+
+  $scope.showConfirm=function(){
+    var confirmPopup=$ionicPopup.confirm({
+      title:"whatever",
+      template:'just a test'
+    });
+    confirmPopup.then(function(res){
+      if(res){
+        console.log('233');
+      }else{
+        console.log('sdsds');
+      }
+    });
+  };
+
+  $scope.showInput=function(){
+    
+  };
+
+})
+
+.controller('ListCtrl',function($scope){
+  
+  $scope.items=['fucker','bitch','shit','poo'];
+  for (var i = 0; i < 10; i++) {
+    $scope.items.push(i);
+  };
+
+  $scope.shouldShowDelete=false;
+  $scope.shouldShowReorder=false;
+  $scope.listCanSwipe=true;
+
+  $scope.reorderItem=function(item,$fromIndex,$toIndex){
+    $scope.items.splice($fromIndex,1);
+    $scope.items.splice($toIndex,0,item);
+  }
+
+})
+
+.controller('LoadingCtrl',function($scope,$ionicLoading,$timeout){
+  
+  $scope.show=function(){
+    $ionicLoading.show({
+      template:'loading...'
+    });
+  }
+
+  $scope.hide=function(){
+    $ionicLoading.hide();
+  }
+
+  $scope.show();
+
+  $timeout(function(){
+    $scope.hide();
+  },1500);
+})
+
 .controller('ActionSheetCtrl',function($scope,$ionicActionSheet){
   
   $scope.showActionSheet=function(){
