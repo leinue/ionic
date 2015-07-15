@@ -1,5 +1,5 @@
-<ion-view view-title="Browse">
-  <ion-content>
+<ion-view view-title="Browse" ng-controller="BrowseCtrl">
+  <ion-content delegate-handle="mainScroll">
     <ion-list 
     		ng-controller="ListCtrl"
     		show-delete="shouldShowDelete"
@@ -26,5 +26,13 @@
 		</ion-item>
 		<ion-infinite-scroll on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
     </ion-list>
+	
+	<button class="button button-calm" ng-click="scrollMainToTop()">
+      Scroll content to top!
+    </button>
+
+    <ion-scroll delegate-handle="small" style="height:100px">
+		<button style="position:fixed" class="button button-positive" ng-click="scrollSmallToTop()">scroll to top</button>
+    </ion-scroll>
   </ion-content>
 </ion-view>

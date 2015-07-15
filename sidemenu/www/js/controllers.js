@@ -256,6 +256,18 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('BrowseCtrl',function($scope,$ionicScrollDelegate){
+  
+  $scope.scrollSmallToTop=function(){
+    $ionicScrollDelegate.$getByHandle('small').scrollTop();
+  };
+
+  $scope.scrollMainToTop=function(){
+    $ionicScrollDelegate.$getByHandle('mainScroll').scrollTop();
+  };
+
+})
+
 .controller('LoadingCtrl',function($scope,$ionicLoading,$timeout){
   
   $scope.show=function(){
