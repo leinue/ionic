@@ -249,6 +249,11 @@ angular.module('starter.controllers', [])
     // $scope.loadMore();
   });
 
+  $scope.onRefresh=function(){
+    console.log(';fddf');
+    $scope.$broadcast('scroll.refreshComplete');
+  };
+
 })
 
 .controller('LoadingCtrl',function($scope,$ionicLoading,$timeout){

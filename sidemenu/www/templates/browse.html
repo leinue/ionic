@@ -5,8 +5,9 @@
     		show-delete="shouldShowDelete"
     		show-reorder="shouldShowReorder"
     		can-swipe="listCanSwipe">
-    		<ion-toggle ng-model="shouldShowDelete">Show Delete?</ion-toggle>
-  	<ion-toggle ng-model="shouldShowReorder">Show Reorder?</ion-toggle>
+		<ion-refresher on-refresh="onRefresh()" refreshing-text="Refreshing..."></ion-refresher>
+    	<ion-toggle ng-model="shouldShowDelete">Show Delete?</ion-toggle>
+  		<ion-toggle ng-model="shouldShowReorder">Show Reorder?</ion-toggle>
 		<ion-item ng-repeat="item in items track by $index">
 			{{item}}
 
