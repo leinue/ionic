@@ -175,7 +175,14 @@ angular.module('starter.controllers', [])
   };
 
   $scope.showInput=function(){
-    
+    $ionicPopup.prompt({
+      title: 'Password Check',
+      template: 'Enter your secret password',
+      inputType: 'password',
+      inputPlaceholder: 'Your password'
+    }).then(function(res) {
+      console.log('Your password is', res);
+    });
   };
 
 })
