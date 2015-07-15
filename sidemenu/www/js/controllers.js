@@ -268,6 +268,14 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('SlideBoxCtrl',function($scope,$ionicSlideBoxDelegate){
+
+  $scope.nextSlide=function(){
+    $ionicSlideBoxDelegate.next();
+  };
+
+})
+
 .controller('LoadingCtrl',function($scope,$ionicLoading,$timeout){
   
   $scope.show=function(){

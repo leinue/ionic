@@ -1,5 +1,22 @@
-<ion-view view-title="Search">
+<ion-view view-title="Search" ng-controller="SlideBoxCtrl">
   <ion-content>
     <div ng-controller="LoadingCtrl"></div>
+
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+    	<!-- <ion-slide-pager></ion-slide-pager> -->
+		<ion-slide>
+			<div class="box blue">
+				<h1>BLUE</h1>
+				<button ng-click="nextSlide()" class="button button-positive button-small">next</button>
+			</div>
+		</ion-slide>
+		<ion-slide>
+			<div class="box yellow"><h1>YELLOW</h1></div>
+		</ion-slide>
+		<ion-slide>
+			<div class="box pink"><h1>PINK</h1></div>
+		</ion-slide>
+    </ion-slide-box>
+    
   </ion-content>
 </ion-view>
