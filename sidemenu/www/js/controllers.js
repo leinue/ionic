@@ -236,6 +236,19 @@ angular.module('starter.controllers', [])
     $scope.items.splice($toIndex,0,item);
   }
 
+  $scope.loadMore=function(){ 
+    $scope.items.push(111);
+    $scope.items.push(111);
+    $scope.items.push(111);
+    $scope.items.push(111);
+    $scope.items.push(111);
+    $scope.$broadcast('scroll.infiniteScrollComplete');
+  };
+
+  $scope.$on('$stateChangeSuccess',function(){
+    // $scope.loadMore();
+  });
+
 })
 
 .controller('LoadingCtrl',function($scope,$ionicLoading,$timeout){

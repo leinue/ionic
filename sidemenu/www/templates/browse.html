@@ -7,7 +7,7 @@
     		can-swipe="listCanSwipe">
     		<ion-toggle ng-model="shouldShowDelete">Show Delete?</ion-toggle>
   	<ion-toggle ng-model="shouldShowReorder">Show Reorder?</ion-toggle>
-		<ion-item ng-repeat="item in items">
+		<ion-item ng-repeat="item in items track by $index">
 			{{item}}
 
 			<ion-option-button class="button-positive" ng-click="share(item)">
@@ -23,6 +23,7 @@
 			<ion-reorder-button class="ion-navicon" on-reorder="reorderItem(item,$fromIndex,$toIndex)"></ion-reorder-button>
 
 		</ion-item>
+		<ion-infinite-scroll on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
     </ion-list>
   </ion-content>
 </ion-view>
