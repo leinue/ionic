@@ -53,7 +53,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+
   $scope.chat = Chats.get($stateParams.chatId);
+
 })
 
 .controller('SearchCtrl',function($scope){
@@ -91,7 +93,7 @@ angular.module('starter.controllers', [])
 
   $scope.openModal=function(){
     $scope.modal.show();
-    $scope.selectTabWithIndex(0);
+    $scope.selectTabWithIndex(selectedIndex());
   };
 
   $scope.closeModal=function(){
