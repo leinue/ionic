@@ -39,7 +39,23 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('SearchCtrl',function(){
+.controller('SearchCtrl',function($scope){
+
+  $scope.doSearchRefresh=function(){
+    $scope.$broadcast('scroll.refreshComplete');
+  };
+
+  $scope.searchLoadMore=function(){
+    $scope.$broadcast('scroll.infiniteScrollComplete');
+  };
+
+  $scope.searchNoMoreData=function(){
+
+  };
+
+  $scope.$on('$stateChangeSuccess',function(){
+    $scope.searchLoadMore();
+  });
 
 })
 
@@ -71,6 +87,10 @@ angular.module('starter.controllers', [])
 
   $scope.Submit=function(){
     $scope.closeModal();
+  };
+
+  $scope.handleMomentsEvents=function(){
+    console.log('dssd');
   };
 
 })
