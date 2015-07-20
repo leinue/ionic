@@ -29,10 +29,27 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
+  $scope.doMessagesRefresh=function(){
+    $scope.$broadcast('scroll.refreshComplete');
+  };
+
+  $scope.MessagesLoadMore=function(){
+    $scope.$broadcast('scroll.infiniteScrollComplete');
+  };
+
+  $scope.MessagesNoMoreData=function(){
+
+  };
+
+  $scope.$on('$stateChangeSuccess',function(){
+    $scope.MessagesLoadMore();
+  });
+
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
+
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

@@ -1,16 +1,21 @@
 <ion-view view-title="Messages">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/messages/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
 
+    <ion-refresher pulling-text="pulling to refresh" on-refresh="doMessagesRefresh()"></ion-refresher>
+
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-left item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/messages/{{chat.id}}">
+        <i class="icon {{chat.icon}}"></i>
+        <h2>{{chat.name}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
         <ion-option-button class="button-assertive" ng-click="remove(chat)">
           Delete
         </ion-option-button>
       </ion-item>
     </ion-list>
+
+    <ion-finite-scroll spinner icon="ion-load-c" ng-if="MessagesNoMoreData()" on-infinite="MessagesLoadMore()" distance="1%">
+   </ion-finite-scroll>
+
   </ion-content>
 </ion-view>
