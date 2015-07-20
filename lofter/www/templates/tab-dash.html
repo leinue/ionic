@@ -1,0 +1,71 @@
+<ion-view view-title="Lofter">
+  <ion-content class="padding main-content-color">
+
+    <ion-refresher pulling-text="pulling to refresh" on-refresh="doDashRefresh()">
+    </ion-refresher>
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="http://pic3.zhimg.com/65655995f2b6118b1d2c366422c8308e_m.jpg">
+        <h2>蛤蛤</h2>
+        <p>年轻人不要习习蛤蛤胡搞毛搞</p>
+      </div>
+
+      <div class="item item-image">
+        <img src="http://pic2.zhimg.com/f5323f33869510391a1adabf34868385_r.jpg">
+      </div>
+
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-music-note"></i>
+        大圣归来
+      </a>
+
+    </div>
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="http://pic2.zhimg.com/bfb07a5b5ac4ae9d577e5d8882dfc835_b.png">
+        <h2>教父</h2>
+        <p>November 05, 1955</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="http://pic2.zhimg.com/bfb07a5b5ac4ae9d577e5d8882dfc835_b.png">
+        <p>
+          孙猴子的情怀、国产动画重振的情怀、国产电影崛起的情怀……大圣归来承担的情怀太多了。或许不是它要承担，或许一开始只是用情怀做做营销的引子，但黑暗之中的一点光明，无疑会减负上照亮世界的重任。这是刻意营销的结果，也是命运赋予的责任。
+        </p>
+        <p>
+          <a href="#" class="subdued">1 赞</a>
+          <a href="#" class="subdued">5 评论</a>
+          <a href="#" class="subdued">2 收藏</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-only tabs-background-dark">
+        <a class="tab-item activated" href="#">
+          <i class="icon ion-thumbsup"></i>
+          赞
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          评论
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-heart"></i>
+          收藏
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          分享
+        </a>
+      </div>
+
+    </div>
+
+   <ion-finite-scroll spinner icon="ion-load-c" ng-if="dashNoMoreData()" on-infinite="dashLoadMore()" distance="1%">
+   </ion-finite-scroll>
+
+  </ion-content>
+</ion-view>
