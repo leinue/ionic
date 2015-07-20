@@ -56,6 +56,14 @@ angular.module('starter.controllers', [])
 
   $scope.chat = Chats.get($stateParams.chatId);
 
+  $scope.toTabMsgsDetail=function(msgId){
+
+  }
+
+})
+
+.controller('PostDetailCtrl',function($scope){
+  console.log('dsds');
 })
 
 .controller('SearchCtrl',function($scope){
@@ -93,7 +101,7 @@ angular.module('starter.controllers', [])
 
   $scope.openModal=function(){
     $scope.modal.show();
-    $scope.selectTabWithIndex(selectedIndex());
+    $scope.selectTabWithIndex($ionicTabsDelegate.selectedIndex());
   };
 
   $scope.closeModal=function(){
