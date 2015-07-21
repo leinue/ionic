@@ -90,12 +90,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.post-detail',{
-    url:'/postdetail',
+  .state('tab.postdetail',{
+    url:'/messages/postdetail',
     views:{
       'tab-detail':{
         templateUrl:'templates/post-detail.html',
         controller:'PostDetailCtrl'
+      }
+    }
+  })
+
+  .state('tab.test',{
+    url:'/test',
+    views:{
+      'tab-test':{
+        templateUrl:'templates/test.html',
+        controller:'TestCtrl'
       }
     }
   })
@@ -116,6 +126,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
         controller: 'AccountCtrl'
+      }
+    }
+  })
+
+  .state('tab.settings',{
+    url:'/settings',
+    views:{
+      'tab-account':{
+        templateUrl:'templates/tab-account-settings.html',
+        controller:'AccountSettingCtrl'
       }
     }
   });

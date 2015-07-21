@@ -1,0 +1,25 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-calm">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-close-outline" ng-click="closeFeedbackModal()"></button>
+		</div>
+		<h1 class="title">Feedback</h1>
+	</ion-header-bar>
+
+	<ion-content>
+		<div class="list">
+		  <label class="item item-input item-floating-label">
+		    <span class="input-label">Email</span>
+		    <input type="text" placeholder="Email">
+		  </label>
+		  <label class="item item-input item-floating-label">
+		  	<span class="input-label">feedback</span>
+		  	<textarea row="10"></textarea>
+		  </label>
+		</div>
+	</ion-content>
+	
+	<div class="bar bar-footer bar-balanced bar-post">
+	    <button class="button button-full button-balanced">Submit</button>
+	</div>
+</ion-modal-view>

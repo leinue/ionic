@@ -35,8 +35,16 @@
 	margin:0px!important;
 }
 
+.light{
+	color: rgb(250,250,250)!important;
+}
+
 .balanced{
 	color: rgb(87,153,243)!important;
+}
+
+.balancedn{
+	color: rgb(51,205,95)!important;
 }
 
 .calm{
@@ -51,6 +59,19 @@
 	color: rgb(239,71,58)!important;
 }
 
+.assertive.background{
+	color: rgb(255,255,255)!important;
+	background: rgb(239,71,58)!important;
+}
+
 .meesage-list-item{
 	padding:0px!important;
+}
+
+.user-inter-btn a i{
+	color: rgb(175,203,251);
+}
+
+.user-inter-btn a .activated{
+	color: rgb(56,126,245);
 }

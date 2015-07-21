@@ -1,9 +1,88 @@
 <ion-view view-title="Account">
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
+	<ion-refresher pulling-text="pull to loading..." on-refresh="doAccountRefresh()">
+	</ion-refresher>
+  	<div class="list">
+	  	<a class="item item-avatar item-icon-right" href="#" style="padding-left:54px;">
+	      <img style="left:8px!important" src="http://pic3.zhimg.com/65655995f2b6118b1d2c366422c8308e_m.jpg">
+	      <h2>ivy</h2>
+	      <p>Back off, man. I'm a scientist.</p>
+	      <i class="icon ion-chevron-right icon-accessory"></i>
+	    </a>
+
+	    <a class="item item-icon-left item-icon-right" href="#">
+        	<i class="icon ion-edit calm"></i>
+		    Posts
+		    <span class="item-note badge badge-balanced">
+		      99
+		    </span>
+		    <i class="icon ion-chevron-right icon-accessory"></i>
+	  	</a>
+
+	  	<a class="item item-icon-left item-icon-right" href="#">
+        	<i class="icon ion-heart calm"></i>
+		    Favourites
+		    <span class="item-note badge badge-balanced">
+		      64
+		    </span>
+		    <i class="icon ion-chevron-right icon-accessory"></i>
+	  	</a>
+
+	  	<div class="item item-divider">
+            Profile
+        </div>
+
+		<a class="item item-icon-left" ng-click="chooseGender()">
+		    <i class="icon ion-transgender icon-calm calm"></i>
+		    Gender
+		    <span ng-model="account.sex" class="item-note">
+		      {{account.sex}}
+		    </span>
+	  	</a>
+
+	  	<a class="item item-icon-left" ng-click="fillEmail()" href="#">
+		    <i class="icon ion-email icon-calm calm"></i>
+		    E-mail
+		    <span ng-model="account.email" class="item-note">
+		      {{account.email}}
+		    </span>
+	  	</a>
+
+        <a class="item item-icon-left" ng-click="fillRegion()">
+		    <i class="icon ion-location icon-calm calm"></i>
+		    Region
+		    <span ng-model="account.region" class="item-note">
+		      {{account.region}}
+		    </span>
+	  	</a>
+
+	  	<a class="item item-icon-left" ng-click="fillIntro()">
+	  		<i class="icon ion-paper-airplane icon-calm calm"></i>
+		    What's up
+		    <span ng-model="acccount.intro" class="item-note">
+		      {{account.intro}}
+		    </span>
+	  	</a>
+
+	  	<div class="item item-divider">
+            System
+        </div>
+
+	  	<a class="item item-icon-left item-icon-right" href="#/tab/settings">
+		  <i class="icon ion-gear-a icon-calm calm"></i>
+		  <h2>Settings</h2>
+		  <i class="icon ion-chevron-right icon-accessory"></i>
+		</a>
+
+	  	<div class="item item-divider">
+            Account
+        </div>
+
+	  	<a class="item assertive background" style="text-align:center" href="#">
+	  		<i class="icon ion-power light"></i>
+		    Logout
+	  	</a>
+
+	</div>
   </ion-content>
 </ion-view>

@@ -1,22 +1,91 @@
-<ion-view view-title="Details">
-	<ion-content class="padding main-content-color">
-		<div class="list card">
 
-	      <div class="item item-avatar">
-	        <img src="http://pic3.zhimg.com/65655995f2b6118b1d2c366422c8308e_m.jpg">
-	        <h2>蛤蛤</h2>
-	        <p>年轻人不要习习蛤蛤胡搞毛搞</p>
-	      </div>
+<ion-modal-view>
+  <ion-header-bar class="bar-stable bar-calm">
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-close-outline" ng-click="closeModal()"></button>
+    </div>
+    <h1 class="title">Details</h1>
+  </ion-header-bar>
+  <ion-content class="main-content-color">
 
-	      <div class="item item-image">
-	        <img src="http://pic2.zhimg.com/f5323f33869510391a1adabf34868385_r.jpg">
-	      </div>
+  	<ion-refresher pulling-text="puul to loading..." on-refresh="doDetailsRefresh()"></ion-refresher>
 
-	      <a class="item item-icon-left assertive" href="#">
-	        <i class="icon ion-music-note"></i>
-	        大圣归来
-	      </a>
+    <div class="list card">
 
-	    </div>
-	</ion-content>
-</ion-view>
+      <div class="item item-avatar">
+        <img src="http://pic3.zhimg.com/65655995f2b6118b1d2c366422c8308e_m.jpg">
+        <h2>蛤蛤</h2>
+        <p>这是最好的</p>
+      </div>
+
+      <div class="item item-image">
+        <img src="http://i62.tinypic.com/vn2jrt.jpg">
+      </div>
+
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-music-note"></i>
+        青鸟
+      </a>
+
+      <div class="item item-body">
+        <p>
+         言叶を失った现実 それを思い出せない梦 すべてがよりそった时に どこまでいけるだろう 锖びれた羽音は今でも やっとのことで闻こえてる 谁かが恋しいのかも どこまでいけるだろう 青い鸟よ 青い鸟よ 宙をすり抜ける速さで 青い鸟よ 
+        </p>
+        <p>
+          <a href="#" class="subdued">1 赞</a>
+          <a href="#" class="subdued">5 评论</a>
+          <a href="#" class="subdued">2 收藏</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-only tabs-background-dark user-inter-btn">
+        <a class="tab-item activated" href="#">
+          <i class="icon ion-thumbsup"></i>
+          赞
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          评论
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-heart"></i>
+          收藏
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          分享
+        </a>
+      </div>
+
+    </div>
+
+    <ion-list class="list">
+
+      <ion-item ng-click="toTabMsgsDetail()" class="message-list-item" style="padding:0px">
+        <a class="item item-avatar">
+          <img src="http://i62.tinypic.com/vn2jrt.jpg">
+          <h2>venkman</h2>
+          <p>Back off, man. I'm a scientist.Back off, man. I'm a scientist.Back off, man. I'm a scientist.</p>
+        </a>
+      </ion-item>
+
+      <ion-item ng-click="toTabMsgsDetail()" class="message-list-item" style="padding:0px">
+        <a class="item item-avatar">
+          <img src="http://i62.tinypic.com/vn2jrt.jpg">
+          <h2>venkman</h2>
+          <p>Back off, man. I'm a scientist.</p>
+        </a>
+      </ion-item>
+
+      <ion-item ng-click="toTabMsgsDetail()" class="message-list-item" style="padding:0px">
+        <a class="item item-avatar">
+          <img src="http://i62.tinypic.com/vn2jrt.jpg">
+          <h2>venkman</h2>
+          <p>Back off, man. I'm a scientist.</p>
+        </a>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+</ion-modal-view>
